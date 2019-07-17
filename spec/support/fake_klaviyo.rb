@@ -1,6 +1,5 @@
 require 'sinatra/base'
 
-# https://thoughtbot.com/blog/how-to-stub-external-services-in-tests
 class FakeKlaviyo < Sinatra::Base
   get '/api/v2/list/:list_id/members' do
     json_response 200, params['emails'], 'fetch_member_from_list.json'

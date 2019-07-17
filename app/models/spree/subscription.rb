@@ -39,8 +39,8 @@ module Spree
         email: email
       }
 
-      request_body[:first_name] = user.subscription_firstname unless user.nil? || user.subscription_firstname.blank?
-      request_body[:last_name] = user.subscription_lastname unless user.nil? || user.subscription_lastname.blank?
+      request_body[:first_name] = user.subscription_firstname unless user&.subscription_firstname.blank?
+      request_body[:last_name] = user.subscription_lastname unless user&.subscription_lastname.blank?
       request_body[:source] = source unless source.blank?
 
       request_body

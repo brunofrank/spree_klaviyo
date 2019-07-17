@@ -14,7 +14,7 @@ module SpreeKlaviyo
           else
             subscription.update(state: Spree::Subscription::STATE_SUBSCRIBED_SYNCED)
           end
-        elsif member_info.nil? && subscription.subscribed?
+        else
           puts "Unsubscribe #{subscription.email}"
           # Prevent re-synchronization from Spree to Mailchimp by updating single user column without callbacks
           subscription.user.update_column(:receive_emails_agree, false) if subscription.user.present?

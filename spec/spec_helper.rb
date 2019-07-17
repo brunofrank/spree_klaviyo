@@ -1,11 +1,12 @@
 # Configure Rails Environment
 ENV['RAILS_ENV'] = 'test'
 
-if false
-  require 'webmock/rspec'
-  require 'support/fake_klaviyo'
-  WebMock.disable_net_connect!(allow_localhost: true)
-end
+# Uncomment this to mock the requests.
+=begin
+require 'webmock/rspec'
+require 'support/fake_klaviyo'
+WebMock.disable_net_connect!(allow_localhost: true)
+=end
 
 RSpec.configure do |config|
 
