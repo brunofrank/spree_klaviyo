@@ -1,4 +1,4 @@
-SpreeMailchimp
+SpreeKlaviyo
 ==============
 
 ## Installation

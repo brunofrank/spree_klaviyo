@@ -22,5 +22,11 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'spree_core', '>= 3.1.0', '< 4.0'
-  s.add_dependency 'klaviyo'
+  s.add_dependency 'httparty'
+  s.add_dependency 'sentry-raven'
+
+  s.add_development_dependency 'rspec-rails', '~> 3.4'
+  s.add_development_dependency 'sinatra'
+  s.add_development_dependency 'webmock'
+  s.add_development_dependency 'byebug'
 end
