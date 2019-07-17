@@ -11,6 +11,7 @@ module SpreeKlaviyo
         end
       else
         client.unsubscribe(list_id, subscription.email)
+        client.remove_from_list(list_id, subscription.email)
       end
 
       subscription.set_as_synced
